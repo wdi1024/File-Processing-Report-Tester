@@ -82,6 +82,14 @@ You can test your project on `Github Actions`. `fork` this repository and `enabl
 
 ❗️❗️❗️Must fork it as `Private` repository❗️❗️❗️
 
+Or you can create a new repository with the `template` below.
+
+```
+https://github.com/KMU-File-Processing/File-Processing-Report-Tester/generate
+```
+
+❗️❗️❗️Must create it as `Private` repository either❗️❗️❗️
+
 </br>
 
 ## Configuration

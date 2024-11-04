@@ -45,6 +45,8 @@ If you are not using GitHub Actions, please refer to the following platform requ
 
 MacOS-sequioa15.0
 
+</br>
+
 ## Compiler
 
 Apple clang version 16.0.0 (clang-1600.0.26.3)

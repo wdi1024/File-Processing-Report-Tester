@@ -43,7 +43,7 @@ If you are not using GitHub Actions, please refer to the following platform requ
 
 ## Operating System
 
-MacOS-sequioa15.0
+MacOS-sequoia15.0
 
 </br>
 

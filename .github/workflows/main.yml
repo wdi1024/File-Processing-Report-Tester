@@ -17,6 +17,9 @@ on:
                     - "__avltree"
                     - "__btree"
 
+env:
+    DEFAULT_PROJECT: "__bstree"
+
 jobs:
     test:
         runs-on: macos-14
@@ -31,7 +34,7 @@ jobs:
                   sed -i '' 's|^PATH_DEEPTHOUGHT=.*|PATH_DEEPTHOUGHT="${PWD}/result"|' my_config.sh
 
             - name: Set project
-              run: echo PROJECT=${{ github.event.inputs.project }} >> $GITHUB_ENV
+              run: echo PROJECT=${{ github.event.inputs.project || env.DEFAULT_PROJECT }} >> my_config.sh
 
             - name: Install dependencies
               run: brew install coreutils

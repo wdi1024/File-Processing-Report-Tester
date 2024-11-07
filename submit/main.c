@@ -233,13 +233,17 @@ int main()
     
     while (fgets(strTemp, sizeof(strTemp), stdin) != NULL) {
         key = 0;
-        int j = 1;
-        while (strTemp[++j] > 47 && strTemp[j] < 58)
+        int j = 2;
+        while (strTemp[j] > 47 && strTemp[j] < 58){
             key = key * 10 + (strTemp[j] - '0');
+            j++;
+        }
         if (strTemp[0] == 'i')
             insertBST(&root, key);
         else if (strTemp[0] == 'd')
             deleteBST(&root, key);
+        else
+            continue;
         printf("\n");
     }
     free(root);

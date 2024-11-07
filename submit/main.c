@@ -164,7 +164,6 @@ void insertBST(Node** node, int key){
     }
 
     free(stack);
-    free(p);
     inOrder(*node);
 }
 
@@ -260,6 +259,5 @@ int main()
         printf("\n");
     }
     clearNode(root);
-    free(root);
     return 0;
 }

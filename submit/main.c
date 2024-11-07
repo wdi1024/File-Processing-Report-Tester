@@ -136,7 +136,6 @@ void insertBST(Node** node, int key){
         if(key == p->key){
             printf("i %d: The key already exists", key);
             free(stack);
-            free(q);
             return;
         }else{
             q = p;
@@ -185,7 +184,6 @@ void deleteBST(Node** node, int key){
     if (p == NULL){
         printf("d %d: The key does not exist", key);
         free(stack);
-        free(p);
         return;
     }
     if (p->left != NULL && p->right != NULL){

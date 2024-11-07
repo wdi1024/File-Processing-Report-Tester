@@ -61,6 +61,8 @@ test_random_case() {
 
 	test_cases "-type f -name random*"
 
+ 	remove_testcases
+  
 	return $?
 }
 

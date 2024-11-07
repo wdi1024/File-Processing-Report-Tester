@@ -113,6 +113,18 @@ Node* maxNode(Node* root, StackType* stack){
     return root;
 }
 
+void clearNode(Node* node){
+    if (node== NULL)
+        return;
+    if (node->left != NULL)
+        clearNode(node->left);
+    if (node->right != NULL)
+        clearNode(node->right);
+    node->left = NULL;
+    node->right = NULL;
+    free(node);
+}
+
 void insertBST(Node** node, int key){
     Node *p = *node;
     Node *q = NULL;
@@ -246,6 +258,7 @@ int main()
             continue;
         printf("\n");
     }
+    
     free(root);
     return 0;
 }

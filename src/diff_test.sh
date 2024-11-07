@@ -28,7 +28,6 @@ leak_test() {
 		leaks --atExit -- "${PATH_TEST}"/user_exe < "$1" > leaks.log 2>&1 
 	fi
 	result=$(cat leaks.log)
-	rm -f leaks.log
 
 	if echo $result | grep -qv "0 leaks for 0 total leaked bytes"; then
 		printf "Command './user_exe < $1' got leaks\n" >> "${PATH_DEEPTHOUGHT}"/deepthought

@@ -53,7 +53,7 @@ Node* pop(StackType *S)
 
 int Height(Node* node)
 {
-    if(node != NULL)
+    if(node == NULL)
         return 0;
     int left = Height(node->left);
     int right = Height(node->right);
@@ -123,6 +123,7 @@ void clearNode(Node* node){
     node->left = NULL;
     node->right = NULL;
     free(node);
+    return;
 }
 
 void insertBST(Node** node, int key){

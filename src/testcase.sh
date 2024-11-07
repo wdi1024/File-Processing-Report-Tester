@@ -12,6 +12,7 @@ generate_testcase() {
 		instruction=$(shuf -n 1 -e 'i' 'd')
 		number=$(shuf -i 1-25 -n1)
 		echo "$instruction $number" >> "$filename"
+  		printf "${instruction} ${number} is generated"
 	done
 }
 

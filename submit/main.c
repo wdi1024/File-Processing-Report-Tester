@@ -258,7 +258,7 @@ int main()
             continue;
         printf("\n");
     }
-    
+    clearNode(root);
     free(root);
     return 0;
 }
